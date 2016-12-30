@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <group ns="ardrone">
+    <node name="drone_teleop" pkg="ros_drone_teleop" type="keyboard_teleop_node" output="screen">
+      <param name="model" value="ar_drone" />
+    </node>
+  </group>
+
+</launch>
