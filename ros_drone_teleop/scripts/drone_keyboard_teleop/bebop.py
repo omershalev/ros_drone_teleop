@@ -71,4 +71,4 @@ class BebopKeyboardTeleop(KeyboardTeleop):
                 print 'Invalid input'
                 return
             twist = self.create_twist_message(0,0,0,0,tilt,pan)
-            self.send_twist(twist)
+            self.camera_control_publisher.publish(twist)
