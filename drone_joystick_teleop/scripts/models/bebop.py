@@ -29,7 +29,7 @@ class BebopJoystickTeleop(object):
         return twist
 
     def joy_callback(self, msg):
-        if msg.buttons[13] == 1 and msg.buttons[11] == 1 and msg.buttons[9] == 1:
+        if msg.buttons[13] == 1 and msg.buttons[8] == 1 and msg.buttons[9] == 1 and msg.buttons[10] == 1 and msg.buttons[11] == 1:
             self.reset_publisher.publish(self.empty_msg)
         elif msg.buttons[14] == 1 and msg.buttons[11] == 1:
             self.land_publisher.publish(self.empty_msg)
