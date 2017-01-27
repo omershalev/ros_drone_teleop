@@ -3,7 +3,7 @@ ROS package for teleoperation of aerial vehicles
 
 Prerequisites
 ---
-Depending on the model, you will need to have the relevant ROS messages installed. For instance (for AR-Drone):
+Depending on the model, you will need to have the relevant ROS messages installed. For instance (AR-Drone on Indigo):
 ```
 sudo apt-get install ros-indigo-ardrone-autonomy
 ```
