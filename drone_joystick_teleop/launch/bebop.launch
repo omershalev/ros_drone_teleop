@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <group ns="bebop">
+  	<include file="$(find drone_joystick_teleop)/launch/generic.launch" /> 
+  	<node pkg="drone_joystick_teleop" type="bebop.py" name="bebop_teleop" />
+  </group>
+
+</launch>
