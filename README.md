@@ -1,10 +1,9 @@
 # ros_drone_teleop
-ROS package teleoperation of drones
+ROS package for teleoperation of aerial vehicles
 
 Prerequisites
 ---
-Depends on the model type, need to have the relevant ROS messages installed
-For instance:
+Depending on the model, you will need to have the relevant ROS messages installed. For instance (for AR-Drone):
 ```
 sudo apt-get install ros-indigo-ardrone-autonomy
 ```
@@ -25,4 +24,8 @@ roslaunch ros_drone_teleop ardrone_keyboard_teleop.launch
 For Bebop:
 ```
 roslaunch ros_drone_teleop bebop_keyboard_teleop.launch
+```
+For generic drone:
+```
+roslaunch ros_drone_teleop generic.launch
 ```
