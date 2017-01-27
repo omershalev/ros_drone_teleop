@@ -1,22 +1,21 @@
 #!/usr/bin/env python
 
 import rospy
-from drone_keyboard_teleop.keyboard_teleop_base import KeyboardTeleop
-from drone_keyboard_teleop.ardrone import ArDroneKeyboardTeleop
-from drone_keyboard_teleop.bebop import BebopKeyboardTeleop
-
 
 if __name__ == '__main__':
-    rospy.init_node('drone_keyboard_teleop', anonymous=True)
+    rospy.init_node('drone_teleop', anonymous=True)
 
     namespace = rospy.get_namespace()
 
     model = rospy.get_param('~model', None)
     if model == 'ar_drone':
+        from models.ardrone import ArDroneKeyboardTeleop
         teleop = ArDroneKeyboardTeleop(namespace)
     elif model == 'bebop':
+        from models.bebop import BebopKeyboardTeleop
         teleop = BebopKeyboardTeleop(namespace)
     else:
+        from models.keyboard_teleop_base import KeyboardTeleop
         teleop = KeyboardTeleop(namespace)
 
     teleop.run()

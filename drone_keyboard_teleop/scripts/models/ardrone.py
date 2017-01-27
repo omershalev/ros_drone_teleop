@@ -2,7 +2,7 @@
 
 import rospy
 import os
-from drone_keyboard_teleop.keyboard_teleop_base import KeyboardTeleop
+from models.keyboard_teleop_base import KeyboardTeleop
 from ardrone_autonomy.msg import Navdata
 from std_msgs.msg import Empty as EmptyMsg
 from std_srvs.srv import Empty as EmptySrv

@@ -3,7 +3,7 @@
 <launch>
   
   <group ns="bebop">
-    <node name="drone_teleop" pkg="ros_drone_teleop" type="keyboard_teleop_node" output="screen">
+    <node name="drone_teleop" pkg="drone_keyboard_teleop" type="keyboard_teleop_node" output="screen">
       <param name="model" value="bebop" />
     </node>
   </group>
