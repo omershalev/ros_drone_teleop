@@ -17,15 +17,23 @@ Installation
 
 Launch
 ---
-For AR-Drone:
+AR-Drone with keyboard:
 ```
-roslaunch ros_drone_teleop ardrone_keyboard_teleop.launch
+roslaunch drone_keyboard_teleop ardrone_keyboard_teleop.launch
 ```
-For Bebop:
+Bebop with keyboard:
 ```
-roslaunch ros_drone_teleop bebop_keyboard_teleop.launch
+roslaunch drone_keyboard_teleop bebop_keyboard_teleop.launch
 ```
-For generic drone:
+Generic drone with keyboard:
 ```
-roslaunch ros_drone_teleop generic.launch
+roslaunch drone_keyboard_teleop generic.launch
+```
+Bebop with joystick:
+```
+roslaunch drone_joystick_teleop bebop.launch
+```
+Generic drone with joystick:
+```
+roslaunch drone_joystick_teleop generic.launch
 ```
