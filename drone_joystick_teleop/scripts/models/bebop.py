@@ -31,22 +31,19 @@ class BebopJoystickTeleop(object):
     def joy_callback(self, msg):
         if msg.buttons[13] == 1 and msg.buttons[8] == 1 and msg.buttons[9] == 1 and msg.buttons[10] == 1 and msg.buttons[11] == 1:
             self.reset_publisher.publish(self.empty_msg)
-        elif msg.buttons[14] == 1 and msg.buttons[11] == 1:
+        elif msg.buttons[14] == 1 and (msg.buttons[9] == 1 or msg.buttons[11] == 1):
             self.land_publisher.publish(self.empty_msg)
-        elif msg.buttons[12] == 1 and msg.buttons[11] == 1:
+        elif msg.buttons[12] == 1 and (msg.buttons[9] == 1 or msg.buttons[11] == 1):
             self.takeoff_publisher.publish(self.empty_msg)
-        elif msg.buttons[15] == 1 and msg.buttons[11] == 1:
+        elif msg.buttons[15] == 1 and (msg.buttons[9] == 1 or msg.buttons[11] == 1):
             bool_msg = Bool(True)
             self.navigate_home_publisher.publish(bool_msg)
         elif msg.buttons[3] == 1:
             self.flat_trim_publisher.publish(self.empty_msg)
-        elif msg.axes[8] != 0:
+        elif msg.buttons[4] == 1:
             twist = self.create_twist_message(0,0,0,0,0,0)
             self.camera_control_publisher.publish(twist)
-        elif msg.axes[8] != 1.0:
-            twist = self.create_twist_message(0,0,0,0,0,0)
-            self.camera_control_publisher.publish(twist)
-        elif msg.axes[10] != 1.0:
+        elif msg.buttons[6] == 1:
             twist = self.create_twist_message(0,0,0,0,-90,0)
             self.camera_control_publisher.publish(twist)
 
