@@ -2,7 +2,7 @@ teleop:
   regular:
     type: topic
     message_type: geometry_msgs/Twist
-    topic_name: cmd_vel
+    topic_name: teleop_cmd_vel
     deadman_buttons: [8]
     axis_mappings:
       -
@@ -25,7 +25,7 @@ teleop:
   turbo:
     type: topic
     message_type: geometry_msgs/Twist
-    topic_name: cmd_vel
+    topic_name: teleop_cmd_vel
     deadman_buttons: [10]
     axis_mappings:
       -

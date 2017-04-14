@@ -19,7 +19,7 @@ class KeyboardTeleop(object):
         self.is_last_twist_zero = False
         self.need_to_exit = False
 
-        self.output_topic = self.namespace + 'cmd_vel'
+        self.output_topic = self.namespace + 'teleop_cmd_vel'
         self.vel_publisher = rospy.Publisher(self.output_topic, Twist, queue_size=10)
         self.settings = termios.tcgetattr(sys.stdin)
 
